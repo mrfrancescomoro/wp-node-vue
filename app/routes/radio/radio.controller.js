@@ -4,16 +4,18 @@
  * @param {object} router
  */
 module.exports = (router) => {
-    router.get("/",
+    router.get("/radio",
         /**
          * @param {object} req
          * @param {object} res
          */
         (req, res) => {
-            const data = {};
-            req.vueOptions.head.title = "Kongmedia";
+            const data = {
+                title: "Radio"
+            };
+            req.vueOptions.head.title = `Kongmedia - ${data.title}`;
             req.vueOptions.head.description = "Kongmedia";
-            res.renderVue("main/main.vue", data, req.vueOptions);
+            res.renderVue("radio/radio.vue", data, req.vueOptions);
         },
     );
 };

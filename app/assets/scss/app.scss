@@ -1,6 +1,9 @@
+@import "variables";
+
 html {
     body {
-        background: white;
-        color: black;
+        background: $white;
+        color: $black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 }
